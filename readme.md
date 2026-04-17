@@ -4,6 +4,7 @@
 Personal website built to showcase my work as a Full Stack / Backend Software Engineer, highlight selected projects, and provide a central place to connect my resume, GitHub, and LinkedIn.
 
 The site is intentionally simple, fast, and content-focused. It acts as a professional landing page rather than a blog or marketing site.
+
 ```
 🔗 Live Site: https://tpoe25.github.io
 
@@ -11,6 +12,7 @@ The site is intentionally simple, fast, and content-focused. It acts as a profes
 
 🔗 GitHub: https://github.com/TPoe25
 ```
+
 ## Purpose
 
 ### I built this website to:
