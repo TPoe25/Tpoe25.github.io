@@ -6,7 +6,7 @@
   <title>Taylor Poe | Full Stack Software Engineer</title>
   <meta
     name="description"
-    content="Taylor Poe - Full Stack Software Engineer building scalable web applications, backend systems, and data-driven products."
+    content="Taylor Poe - Full Stack Software Engineer building modern web applications, backend systems, and data-driven products."
   />
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,12 +19,10 @@
           },
           colors: {
             brand: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              500: '#2563eb',
-              600: '#1d4ed8',
-              700: '#1e40af',
-              900: '#0f172a'
+              navy: '#081c35',
+              blue: '#2563eb',
+              slate: '#0f172a',
+              light: '#f8fafc'
             }
           },
           boxShadow: {
@@ -34,14 +32,14 @@
       }
     }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-slate-50 text-slate-900 font-sans">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur">
+<body class="bg-slate-50 font-sans text-slate-900">
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/95 backdrop-blur">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
       <a href="#hero" class="text-xl font-extrabold tracking-tight text-white">Taylor Poe</a>
 
@@ -57,9 +55,8 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <section id="hero" class="relative overflow-hidden bg-slate-950">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,0.28),_transparent_35%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,0.25),_transparent_35%)]"></div>
 
     <div class="relative mx-auto max-w-7xl px-6 py-24 text-center lg:px-8 lg:py-32">
       <p class="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
@@ -83,7 +80,7 @@
           View Capstone
         </a>
         <a
-          href="https://drive.google.com/file/d/179kn8gDw6Z8QDlBlq198LyLuEvJm8Bdw/view?usp=sharing"
+          href="resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex min-w-[180px] items-center justify-center rounded-xl border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
@@ -99,7 +96,6 @@
     </div>
   </section>
 
-  <!-- About -->
   <section id="about" class="bg-white py-20 sm:py-24">
     <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[320px_minmax(0,1fr)] lg:px-8">
       <div>
@@ -108,7 +104,7 @@
             src="images/profile.jpg"
             alt="Taylor Poe professional headshot"
             class="h-[360px] w-full object-cover"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); this.nextElementSibling.classList.add('flex');"
           >
           <div class="hidden h-[360px] items-center justify-center bg-slate-100 text-center text-slate-500">
             Add profile image<br>images/profile.jpg
@@ -153,7 +149,6 @@
     </div>
   </section>
 
-  <!-- Capstone -->
   <section id="capstone" class="bg-slate-50 py-20 sm:py-24">
     <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
       <div class="overflow-hidden rounded-3xl bg-white shadow-soft">
@@ -161,7 +156,7 @@
           src="images/incisight-cover.png"
           alt="inciSight AI Beauty Product Scanner cover image"
           class="h-full w-full object-cover"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); this.nextElementSibling.classList.add('flex');"
         >
         <div class="hidden min-h-[420px] items-center justify-center bg-gradient-to-br from-blue-50 to-slate-100 p-10 text-center text-slate-500">
           <div>
@@ -234,7 +229,6 @@
     </div>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="bg-white py-20 sm:py-24">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-3xl text-center">
@@ -314,7 +308,6 @@
     </div>
   </section>
 
-  <!-- Resume -->
   <section id="resume" class="bg-slate-950 py-20 text-center text-white sm:py-24">
     <div class="mx-auto max-w-3xl px-6 lg:px-8">
       <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-300">Resume</p>
@@ -333,7 +326,6 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="bg-white py-20 text-center sm:py-24">
     <div class="mx-auto max-w-3xl px-6 lg:px-8">
       <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Contact</p>
