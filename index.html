@@ -1,77 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Taylor Poe | Full Stack Software Engineer</title>
   <meta
     name="description"
-    content="Taylor Poe - Full Stack Software Engineer building modern web applications, backend systems, and data-driven products."
-  >
+    content="Taylor Poe - Full Stack Software Engineer building scalable web applications, backend systems, and data-driven products."
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              900: '#0f172a'
+            }
+          },
+          boxShadow: {
+            soft: '0 20px 50px rgba(15, 23, 42, 0.10)'
+          }
+        }
+      }
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="#hero" class="logo">Taylor Poe</a>
 
-      <nav aria-label="Primary navigation">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#featured-project">Capstone</a></li>
-          <li><a href="#portfolio">Projects</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
+<body class="bg-slate-50 text-slate-900 font-sans">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <a href="#hero" class="text-xl font-extrabold tracking-tight text-white">Taylor Poe</a>
+
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-8 text-sm font-medium text-slate-200">
+          <li><a href="#about" class="transition hover:text-white">About</a></li>
+          <li><a href="#capstone" class="transition hover:text-white">Capstone</a></li>
+          <li><a href="#projects" class="transition hover:text-white">Projects</a></li>
+          <li><a href="#resume" class="transition hover:text-white">Resume</a></li>
+          <li><a href="#contact" class="transition hover:text-white">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="hero" class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">Full Stack Software Engineer</p>
-        <h1>Building modern web applications, backend systems, and data-driven products.</h1>
-        <p class="hero-description">
-          I’m Taylor Poe, a software engineer focused on full stack development, backend architecture,
-          API design, and building products that solve real problems with clean user experiences.
-        </p>
+  <!-- Hero -->
+  <section id="hero" class="relative overflow-hidden bg-slate-950">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,0.28),_transparent_35%)]"></div>
 
-        <div class="hero-actions">
-          <a href="#featured-project" class="btn btn-primary">View Capstone</a>
-          <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Resume</a>
-        </div>
+    <div class="relative mx-auto max-w-7xl px-6 py-24 text-center lg:px-8 lg:py-32">
+      <p class="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-blue-300">
+        Full Stack Software Engineer
+      </p>
 
-        <div class="hero-links">
-          <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/tpoe25" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
+      <h1 class="mx-auto max-w-5xl text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-7xl">
+        Building modern web applications, backend systems, and data-driven products.
+      </h1>
+
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+        I’m Taylor Poe, a software engineer focused on full stack development, backend architecture,
+        API design, and building products that solve real problems with clean user experiences.
+      </p>
+
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href="#capstone"
+          class="inline-flex min-w-[180px] items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-blue-700"
+        >
+          View Capstone
+        </a>
+        <a
+          href="https://drive.google.com/file/d/179kn8gDw6Z8QDlBlq198LyLuEvJm8Bdw/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex min-w-[180px] items-center justify-center rounded-xl border border-slate-700 bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+        >
+          Download Resume
+        </a>
       </div>
-    </section>
 
-    <section id="about" class="section section-light">
-      <div class="container about-grid">
-        <div class="profile-card">
-          <div class="profile-image-wrap">
-            <img
-              src="images/profile.jpg"
-              alt="Taylor Poe professional headshot"
-              class="profile-image"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="image-fallback" style="display:none;">Add Profile Photo</div>
+      <div class="mt-6 flex items-center justify-center gap-6 text-sm font-medium text-slate-300">
+        <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer" class="hover:text-white">GitHub</a>
+        <a href="https://www.linkedin.com/in/tpoe25" target="_blank" rel="noopener noreferrer" class="hover:text-white">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="bg-white py-20 sm:py-24">
+    <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[320px_minmax(0,1fr)] lg:px-8">
+      <div>
+        <div class="overflow-hidden rounded-3xl bg-slate-100 shadow-soft">
+          <img
+            src="images/profile.jpg"
+            alt="Taylor Poe professional headshot"
+            class="h-[360px] w-full object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          >
+          <div class="hidden h-[360px] items-center justify-center bg-slate-100 text-center text-slate-500">
+            Add profile image<br>images/profile.jpg
           </div>
         </div>
+      </div>
 
-        <div class="about-copy">
-          <p class="section-label">About Me</p>
-          <h2>Engineer focused on scalable products and practical problem solving.</h2>
+      <div class="max-w-3xl">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">About Me</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          Engineer focused on scalable products and practical problem solving.
+        </h2>
+
+        <div class="mt-6 space-y-5 text-base leading-8 text-slate-600">
           <p>
             I’m a Full Stack Software Engineer with experience building applications across the frontend,
             backend, and database layers. I enjoy working on products that combine strong technical
@@ -80,188 +131,234 @@
           <p>
             My work includes full stack applications, API platforms, backend systems, asynchronous job
             processing, and cloud-ready deployments. This site is meant to present those projects in a
-            cleaner, more professional way than a resume alone.
+            cleaner and more professional way than a resume alone.
           </p>
+        </div>
 
-          <div class="tag-list">
-            <span>Python</span>
-            <span>JavaScript</span>
-            <span>TypeScript</span>
-            <span>React</span>
-            <span>Next.js</span>
-            <span>Flask</span>
-            <span>PostgreSQL</span>
-            <span>REST APIs</span>
-            <span>Redis</span>
-            <span>Tailwind CSS</span>
-            <span>Prisma</span>
-            <span>Vercel</span>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">Python</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">JavaScript</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">TypeScript</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">React</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">Next.js</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">Flask</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">PostgreSQL</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">REST APIs</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">Prisma</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">Redis</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">Tailwind CSS</span>
+          <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700">Vercel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capstone -->
+  <section id="capstone" class="bg-slate-50 py-20 sm:py-24">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
+      <div class="overflow-hidden rounded-3xl bg-white shadow-soft">
+        <img
+          src="images/incisight-cover.png"
+          alt="inciSight AI Beauty Product Scanner cover image"
+          class="h-full w-full object-cover"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        >
+        <div class="hidden min-h-[420px] items-center justify-center bg-gradient-to-br from-blue-50 to-slate-100 p-10 text-center text-slate-500">
+          <div>
+            <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">Capstone Cover</p>
+            <h3 class="text-3xl font-bold text-slate-900">inciSight</h3>
+            <p class="mt-3 text-sm">Add your screenshot to: images/incisight-cover.png</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <section id="featured-project" class="section section-featured">
-      <div class="container featured-project">
-        <div class="featured-visual">
-          <img
-            src="images/incisight-cover.png"
-            alt="inciSight cover image"
-            class="featured-image"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-          <div class="image-fallback large-fallback" style="display:none;">
-            <div>
-              <p class="fallback-label">Capstone Cover</p>
-              <h3>inciSight</h3>
-              <p>Replace with your real app screenshot or mockup</p>
-            </div>
-          </div>
-        </div>
+      <div>
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Featured Capstone Project</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          inciSight – AI Beauty Product Scanner
+        </h2>
 
-        <div class="featured-copy">
-          <p class="section-label">Featured Capstone Project</p>
-          <h2>inciSight – AI Beauty Product Scanner</h2>
-          <p class="featured-summary">
-            A full stack web application that helps users scan beauty and skincare products, analyze
-            ingredients, and receive AI-assisted safety insights through a structured and scalable workflow.
-          </p>
+        <p class="mt-5 text-base leading-8 text-slate-600">
+          A full stack web application that helps users scan beauty and skincare products, analyze
+          ingredients, and receive AI-assisted safety insights through a structured and scalable workflow.
+        </p>
 
-          <ul class="feature-list">
-            <li>
+        <ul class="mt-6 space-y-4 text-base leading-8 text-slate-700">
+          <li class="flex gap-3">
+            <span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>
+            <span>
               Built a full stack application using <strong>Next.js, TypeScript, Tailwind CSS, Prisma, PostgreSQL, and Vercel</strong>,
               connecting the frontend, backend, database, and deployment layers into one product workflow.
-            </li>
-            <li>
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>
+            <span>
               Implemented core features including <strong>ingredient analysis, risk scoring, product comparison, and AI-generated explanations</strong>
               to turn raw ingredient data into useful, user-facing insights.
-            </li>
-            <li>
-              Designed the app around <strong>connected workflows</strong> such as image upload, structured data handling,
+            </span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-2 h-2 w-2 rounded-full bg-blue-600"></span>
+            <span>
+              Designed the application around <strong>multiple connected workflows</strong> such as image upload, structured data handling,
               live interface feedback, and future OCR/recommendation support to create a scalable foundation for growth.
-            </li>
-          </ul>
+            </span>
+          </li>
+        </ul>
 
-          <p class="project-stack">
-            <strong>Tech Stack:</strong> Next.js, TypeScript, Tailwind CSS, Prisma, PostgreSQL, OpenAI API, Vercel
-          </p>
+        <p class="mt-6 text-sm font-semibold text-slate-900">
+          Tech Stack:
+          <span class="font-medium text-slate-600">Next.js, TypeScript, Tailwind CSS, Prisma, PostgreSQL, OpenAI API, Vercel</span>
+        </p>
 
-          <div class="button-row">
-            <a
-              href="https://beauty-ingredient-scanner.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary"
-            >
-              Live Demo
-            </a>
-            <a
-              href="https://github.com/TPoe25"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary-dark"
-            >
-              GitHub
-            </a>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="https://beauty-ingredient-scanner.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+          >
+            Live Demo
+          </a>
+          <a
+            href="https://github.com/TPoe25"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-white py-20 sm:py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Project Portfolio</p>
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+          Additional projects that show my full stack and backend range.
+        </h2>
+        <p class="mt-4 text-base leading-8 text-slate-600">
+          A selection of projects focused on API design, product development, backend systems, and software engineering fundamentals.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-8 lg:grid-cols-3">
+        <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
+          <div class="flex h-48 items-end bg-gradient-to-br from-blue-600 to-slate-900 p-6">
+            <span class="text-xl font-bold text-white">Fantasy Sports API</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="portfolio" class="section section-light">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-label">Project Portfolio</p>
-          <h2>Additional projects that show my full stack and backend range.</h2>
-          <p>
-            A selection of projects focused on API design, product development, backend systems, and software engineering fundamentals.
-          </p>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-media project-media-blue">Fantasy Sports API</div>
-            <div class="project-content">
-              <h3>Fantasy Sports API & Analytics Platform</h3>
-              <p>
-                A backend platform that aggregates sports data, normalizes it into a fantasy-ready schema,
-                and uses asynchronous jobs for scoring, analytics, and future ML extensions.
-              </p>
-              <p class="stack-line">Python, Flask, PostgreSQL, Celery, Redis, Render</p>
-              <div class="project-links">
-                <a href="https://github.com/TPoe25/fantasy-sports-project" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-900">Fantasy Sports API & Analytics Platform</h3>
+            <p class="mt-4 text-base leading-7 text-slate-600">
+              A backend platform that aggregates sports data, normalizes it into a fantasy-ready schema,
+              and uses asynchronous jobs for scoring, analytics, and future ML extensions.
+            </p>
+            <p class="mt-4 text-sm font-semibold text-slate-900">
+              Python, Flask, PostgreSQL, Celery, Redis, Render
+            </p>
+            <div class="mt-6">
+              <a href="https://github.com/TPoe25/fantasy-sports-project" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-blue-700">
+                View GitHub →
+              </a>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-media project-media-dark">TMDB App</div>
-            <div class="project-content">
-              <h3>TMDB Movie Application</h3>
-              <p>
-                A movie-focused full stack application built around API-driven content, authentication flows,
-                and responsive user experiences for browsing and interacting with entertainment data.
-              </p>
-              <p class="stack-line">Next.js, React, APIs, Authentication, Responsive Design</p>
-              <div class="project-links">
-                <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
+        <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
+          <div class="flex h-48 items-end bg-gradient-to-br from-slate-800 to-slate-950 p-6">
+            <span class="text-xl font-bold text-white">TMDB App</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-900">TMDB Movie Application</h3>
+            <p class="mt-4 text-base leading-7 text-slate-600">
+              A movie-focused full stack application built around API-driven content, authentication flows,
+              and responsive user experiences for browsing and interacting with entertainment data.
+            </p>
+            <p class="mt-4 text-sm font-semibold text-slate-900">
+              Next.js, React, APIs, Authentication, Responsive Design
+            </p>
+            <div class="mt-6">
+              <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-blue-700">
+                View GitHub →
+              </a>
             </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project-card">
-            <div class="project-media project-media-neutral">Simple Shell</div>
-            <div class="project-content">
-              <h3>Simple Shell</h3>
-              <p>
-                A systems-focused C project that reinforced lower-level programming concepts including process handling,
-                parsing, execution flow, and collaborative development.
-              </p>
-              <p class="stack-line">C, Shell, Unix, Systems Programming</p>
-              <div class="project-links">
-                <a href="https://github.com/TPoe25/holbertonschool-simple_shell" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
+        <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
+          <div class="flex h-48 items-end bg-gradient-to-br from-slate-600 to-slate-800 p-6">
+            <span class="text-xl font-bold text-white">Simple Shell</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-slate-900">Simple Shell</h3>
+            <p class="mt-4 text-base leading-7 text-slate-600">
+              A systems-focused C project that reinforced lower-level programming concepts including process handling,
+              parsing, execution flow, and collaborative software development.
+            </p>
+            <p class="mt-4 text-sm font-semibold text-slate-900">
+              C, Shell, Unix, Systems Programming
+            </p>
+            <div class="mt-6">
+              <a href="https://github.com/TPoe25/holbertonschool-simple_shell" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-blue-700">
+                View GitHub →
+              </a>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="resume" class="section section-dark">
-      <div class="container centered-block">
-        <p class="section-label section-label-light">Resume</p>
-        <h2>Download my resume.</h2>
-        <p>
-          View a PDF version of my resume for a full overview of my experience, projects, and technical background.
-        </p>
-        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download Resume</a>
+  <!-- Resume -->
+  <section id="resume" class="bg-slate-950 py-20 text-center text-white sm:py-24">
+    <div class="mx-auto max-w-3xl px-6 lg:px-8">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-300">Resume</p>
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Download my resume.</h2>
+      <p class="mt-4 text-base leading-8 text-slate-300">
+        View a PDF version of my resume for a full overview of my experience, projects, and technical background.
+      </p>
+      <a
+        href="resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-8 inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+      >
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-white py-20 text-center sm:py-24">
+    <div class="mx-auto max-w-3xl px-6 lg:px-8">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Contact</p>
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Let’s connect.</h2>
+      <p class="mt-4 text-base leading-8 text-slate-600">
+        I’m always open to opportunities involving full stack development, backend engineering,
+        data-driven products, and software roles in sports or technology.
+      </p>
+
+      <p class="mt-6">
+        <a href="mailto:taylor.poe@atlasstudents.com" class="text-lg font-semibold text-slate-900 hover:text-blue-600">
+          taylor.poe@atlasstudents.com
+        </a>
+      </p>
+
+      <div class="mt-6 flex items-center justify-center gap-6 text-sm font-medium text-slate-600">
+        <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900">GitHub</a>
+        <a href="https://www.linkedin.com/in/tpoe25" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900">LinkedIn</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="section section-light">
-      <div class="container centered-block">
-        <p class="section-label">Contact</p>
-        <h2>Let’s connect.</h2>
-        <p>
-          I’m always open to opportunities involving full stack development, backend engineering,
-          data-driven products, and software roles in sports or technology.
-        </p>
-
-        <p class="contact-email">
-          <a href="mailto:taylor.poe@atlasstudents.com">taylor.poe@atlasstudents.com</a>
-        </p>
-
-        <div class="hero-links contact-links">
-          <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/tpoe25" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2026 Taylor Poe</p>
+  <footer class="bg-slate-950 py-6">
+    <div class="mx-auto max-w-7xl px-6 text-center text-sm text-slate-400 lg:px-8">
+      © 2026 Taylor Poe
     </div>
   </footer>
 </body>
