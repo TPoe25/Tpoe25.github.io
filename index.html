@@ -6,16 +6,22 @@
   <title>Taylor Poe | Full Stack Software Engineer</title>
   <meta
     name="description"
-    content="Taylor Poe - Full Stack Software Engineer building scalable web applications, backend systems, and data-driven products."
+    content="Taylor Poe - Full Stack Software Engineer building modern web applications, backend systems, and data-driven products."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
   >
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-container">
       <a href="#hero" class="logo">Taylor Poe</a>
-      <nav>
+
+      <nav aria-label="Primary navigation">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#featured-project">Capstone</a></li>
@@ -29,31 +35,40 @@
 
   <main>
     <section id="hero" class="hero">
-      <div class="container hero-content">
+      <div class="container hero-inner">
         <p class="eyebrow">Full Stack Software Engineer</p>
         <h1>Building modern web applications, backend systems, and data-driven products.</h1>
-        <p class="hero-text">
+        <p class="hero-description">
           I’m Taylor Poe, a software engineer focused on full stack development, backend architecture,
           API design, and building products that solve real problems with clean user experiences.
         </p>
 
         <div class="hero-actions">
           <a href="#featured-project" class="btn btn-primary">View Capstone</a>
-          <a href="resume.pdf" target="_blank" class="btn btn-secondary">Download Resume</a>
+          <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Resume</a>
         </div>
 
         <div class="hero-links">
-          <a href="https://github.com/TPoe25" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/tpoe25" target="_blank">LinkedIn</a>
+          <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/tpoe25" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>
 
     <section id="about" class="section section-light">
       <div class="container about-grid">
-        <div class="about-image-wrap">
-          <img src="images/profile.jpg" alt="Taylor Poe professional headshot" class="about-image">
+        <div class="profile-card">
+          <div class="profile-image-wrap">
+            <img
+              src="images/profile.jpg"
+              alt="Taylor Poe professional headshot"
+              class="profile-image"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="image-fallback" style="display:none;">Add Profile Photo</div>
+          </div>
         </div>
+
         <div class="about-copy">
           <p class="section-label">About Me</p>
           <h2>Engineer focused on scalable products and practical problem solving.</h2>
@@ -64,11 +79,11 @@
           </p>
           <p>
             My work includes full stack applications, API platforms, backend systems, asynchronous job
-            processing, and cloud-ready deployments. This website highlights projects that show both my
-            technical range and how I think through real product development.
+            processing, and cloud-ready deployments. This site is meant to present those projects in a
+            cleaner, more professional way than a resume alone.
           </p>
 
-          <div class="skills-grid">
+          <div class="tag-list">
             <span>Python</span>
             <span>JavaScript</span>
             <span>TypeScript</span>
@@ -76,10 +91,10 @@
             <span>Next.js</span>
             <span>Flask</span>
             <span>PostgreSQL</span>
-            <span>Tailwind CSS</span>
             <span>REST APIs</span>
-            <span>Prisma</span>
             <span>Redis</span>
+            <span>Tailwind CSS</span>
+            <span>Prisma</span>
             <span>Vercel</span>
           </div>
         </div>
@@ -87,16 +102,24 @@
     </section>
 
     <section id="featured-project" class="section section-featured">
-      <div class="container featured-project-grid">
-        <div class="featured-image-wrap">
+      <div class="container featured-project">
+        <div class="featured-visual">
           <img
             src="images/incisight-cover.png"
-            alt="inciSight AI Beauty Product Scanner cover image"
+            alt="inciSight cover image"
             class="featured-image"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
           >
+          <div class="image-fallback large-fallback" style="display:none;">
+            <div>
+              <p class="fallback-label">Capstone Cover</p>
+              <h3>inciSight</h3>
+              <p>Replace with your real app screenshot or mockup</p>
+            </div>
+          </div>
         </div>
 
-        <div class="featured-content">
+        <div class="featured-copy">
           <p class="section-label">Featured Capstone Project</p>
           <h2>inciSight – AI Beauty Product Scanner</h2>
           <p class="featured-summary">
@@ -110,22 +133,36 @@
               connecting the frontend, backend, database, and deployment layers into one product workflow.
             </li>
             <li>
-              Implemented core product features including <strong>ingredient analysis, risk scoring, product comparison, and AI-generated explanations</strong>
-              to turn raw ingredient data into useful user-facing insights.
+              Implemented core features including <strong>ingredient analysis, risk scoring, product comparison, and AI-generated explanations</strong>
+              to turn raw ingredient data into useful, user-facing insights.
             </li>
             <li>
-              Designed the application around <strong>multiple connected workflows</strong> such as image upload, structured data handling,
-              live interface feedback, and future OCR/recommendation support to create a scalable foundation for product growth.
+              Designed the app around <strong>connected workflows</strong> such as image upload, structured data handling,
+              live interface feedback, and future OCR/recommendation support to create a scalable foundation for growth.
             </li>
           </ul>
 
-          <p class="tech-stack">
+          <p class="project-stack">
             <strong>Tech Stack:</strong> Next.js, TypeScript, Tailwind CSS, Prisma, PostgreSQL, OpenAI API, Vercel
           </p>
 
-          <div class="project-actions">
-            <a href="https://beauty-ingredient-scanner.vercel.app/" target="_blank" class="btn btn-primary">Live Demo</a>
-            <a href="https://github.com/TPoe25" target="_blank" class="btn btn-secondary">GitHub</a>
+          <div class="button-row">
+            <a
+              href="https://beauty-ingredient-scanner.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              Live Demo
+            </a>
+            <a
+              href="https://github.com/TPoe25"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary-dark"
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </div>
@@ -143,52 +180,46 @@
 
         <div class="projects-grid">
           <article class="project-card">
-            <img src="images/project2.png" alt="Fantasy Sports API project cover" class="project-image">
-            <div class="project-card-content">
+            <div class="project-media project-media-blue">Fantasy Sports API</div>
+            <div class="project-content">
               <h3>Fantasy Sports API & Analytics Platform</h3>
               <p>
                 A backend platform that aggregates sports data, normalizes it into a fantasy-ready schema,
                 and uses asynchronous jobs for scoring, analytics, and future ML extensions.
               </p>
-              <p class="project-stack-line">
-                Python, Flask, PostgreSQL, Celery, Redis, Render
-              </p>
+              <p class="stack-line">Python, Flask, PostgreSQL, Celery, Redis, Render</p>
               <div class="project-links">
-                <a href="https://github.com/TPoe25/fantasy-sports-project" target="_blank">GitHub</a>
+                <a href="https://github.com/TPoe25/fantasy-sports-project" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <img src="images/project1.png" alt="TMDB project cover" class="project-image">
-            <div class="project-card-content">
+            <div class="project-media project-media-dark">TMDB App</div>
+            <div class="project-content">
               <h3>TMDB Movie Application</h3>
               <p>
                 A movie-focused full stack application built around API-driven content, authentication flows,
                 and responsive user experiences for browsing and interacting with entertainment data.
               </p>
-              <p class="project-stack-line">
-                Next.js, React, APIs, Authentication, Responsive Design
-              </p>
+              <p class="stack-line">Next.js, React, APIs, Authentication, Responsive Design</p>
               <div class="project-links">
-                <a href="https://github.com/TPoe25" target="_blank">GitHub</a>
+                <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <img src="images/project3.png" alt="Simple Shell project cover" class="project-image">
-            <div class="project-card-content">
+            <div class="project-media project-media-neutral">Simple Shell</div>
+            <div class="project-content">
               <h3>Simple Shell</h3>
               <p>
                 A systems-focused C project that reinforced lower-level programming concepts including process handling,
-                parsing, execution flow, and collaborative software development.
+                parsing, execution flow, and collaborative development.
               </p>
-              <p class="project-stack-line">
-                C, Shell, Unix, Systems Programming
-              </p>
+              <p class="stack-line">C, Shell, Unix, Systems Programming</p>
               <div class="project-links">
-                <a href="https://github.com/TPoe25/holbertonschool-simple_shell" target="_blank">GitHub</a>
+                <a href="https://github.com/TPoe25/holbertonschool-simple_shell" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
@@ -197,18 +228,18 @@
     </section>
 
     <section id="resume" class="section section-dark">
-      <div class="container centered-content">
+      <div class="container centered-block">
         <p class="section-label section-label-light">Resume</p>
         <h2>Download my resume.</h2>
         <p>
           View a PDF version of my resume for a full overview of my experience, projects, and technical background.
         </p>
-        <a href="resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Download Resume</a>
       </div>
     </section>
 
     <section id="contact" class="section section-light">
-      <div class="container centered-content">
+      <div class="container centered-block">
         <p class="section-label">Contact</p>
         <h2>Let’s connect.</h2>
         <p>
@@ -220,16 +251,16 @@
           <a href="mailto:taylor.poe@atlasstudents.com">taylor.poe@atlasstudents.com</a>
         </p>
 
-        <div class="social-links">
-          <a href="https://github.com/TPoe25" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/tpoe25" target="_blank">LinkedIn</a>
+        <div class="hero-links contact-links">
+          <a href="https://github.com/TPoe25" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/tpoe25" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-content">
+    <div class="container footer-inner">
       <p>© 2026 Taylor Poe</p>
     </div>
   </footer>
