@@ -1,1 +1,279 @@
-/* Tailwind CDN handles the styling for this page. */
+/* Premium Glassmorphic & Cyberpunk CTO Design Tokens */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-base: #030712;       /* Slate-950 */
+  --bg-surface: #0b0f19;    /* Custom deep slate */
+  --bg-card: rgba(15, 23, 42, 0.45);
+  --border-glow: rgba(99, 102, 241, 0.15);
+  --border-light: rgba(255, 255, 255, 0.06);
+  
+  --primary: #6366f1;       /* Indigo-500 */
+  --primary-glow: rgba(99, 102, 241, 0.45);
+  --secondary: #06b6d4;     /* Cyan-500 */
+  --secondary-glow: rgba(6, 182, 212, 0.45);
+  
+  --text-primary: #f8fafc;  /* Slate-50 */
+  --text-secondary: #94a3b8;/* Slate-400 */
+  --text-dim: #64748b;      /* Slate-500 */
+  
+  --success: #10b981;       /* Emerald-500 */
+  --warning: #f59e0b;       /* Amber-500 */
+  --danger: #ef4444;        /* Red-500 */
+  
+  /* Fonts */
+  --font-heading: 'Outfit', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Custom spaces */
+  --in-oklab: ;
+  --in-oklch: ;
+}
+
+@supports (linear-gradient(in oklab, white, black)) {
+  :root {
+    --in-oklab: in oklab;
+    --in-oklch: in oklch;
+  }
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--bg-surface);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Cybernetic Grid & Glowing Orbs Backdrop */
+.grid-backdrop {
+  background-image: 
+    linear-gradient(var(--border-light) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-light) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+  mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, black 30%, transparent 80%);
+  opacity: 0.25;
+}
+
+/* Glowing Ambient Orbs */
+.glow-orb {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+  mix-blend-mode: plus-lighter;
+}
+
+.glow-orb-primary {
+  background: var(--primary);
+  top: 15%;
+  left: 10%;
+  animation: floatOrb 12s ease-in-out infinite alternate;
+}
+
+.glow-orb-secondary {
+  background: var(--secondary);
+  bottom: 20%;
+  right: 10%;
+  animation: floatOrb 15s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(40px, 30px) scale(1.15);
+  }
+}
+
+/* Premium Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg var(--in-oklch), #ffffff 20%, var(--primary) 60%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(99, 102, 241, 0.08);
+}
+
+/* Terminal Widgets & UI Custom Elements */
+.terminal-window {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: var(--secondary);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { background-color: transparent }
+  50% { background-color: var(--secondary) }
+}
+
+/* OCR Scanner Animation overlay */
+.scanner-laser {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+  box-shadow: 0 0 15px var(--secondary);
+  animation: scan 2s linear infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+/* Safety Score Circular Graph SVG indicator */
+.safety-circle {
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+/* Metric Graph Elements */
+.metric-bar-fill {
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metric-circle-node {
+  animation: pulseNode 2s infinite;
+}
+
+@keyframes pulseNode {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(99, 102, 241, 0);
+  }
+}
+
+.metric-circle-node-green {
+  animation: pulseNodeGreen 2s infinite;
+}
+
+@keyframes pulseNodeGreen {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+}
+
+.metric-circle-node-red {
+  animation: pulseNodeRed 1s infinite;
+}
+
+@keyframes pulseNodeRed {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(239, 68, 68, 0);
+  }
+}
+
+/* Digital Rain Code Stream Styling */
+.code-stream {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.12;
+  overflow: hidden;
+}
+
+/* API Sandbox styling updates */
+.json-viewer {
+  font-family: var(--font-mono);
+  background-color: rgba(9, 13, 22, 0.8);
+}
+
+.json-key {
+  color: #c792ea;
+}
+.json-string {
+  color: #c3e88d;
+}
+.json-number {
+  color: #f78c6c;
+}
+.json-boolean {
+  color: #ffcb6b;
+}
+
+/* Responsive & layout tweaks */
+section {
+  position: relative;
+  z-index: 10;
+}
