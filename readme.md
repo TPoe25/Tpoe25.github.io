@@ -1,71 +1,93 @@
-# Personal Website
-## Taylor Poe
+# Taylor Poe — Personal Website
 
-Personal website built to showcase my work as a Full Stack / Backend Software Engineer, highlight selected projects, and provide a central place to connect my resume, GitHub, and LinkedIn.
+Professional portfolio and resume site for **Taylor Poe**, CTO of **PARTNER BioResearch** and a hands-on technical leader working across full-stack engineering, applied AI, systems architecture, and UI/UX.
 
-The site is intentionally simple, fast, and content-focused. It acts as a professional landing page rather than a blog or marketing site.
+**Live:** https://tpoe25.github.io  
+**LinkedIn:** https://www.linkedin.com/in/tpoe25  
+**GitHub:** https://github.com/TPoe25
 
-```
-🔗 Live Site: https://tpoe25.github.io
+## Positioning
 
-🔗 LinkedIn: https://www.linkedin.com/in/tpoe25
+The site is designed to communicate senior technical leadership quickly without turning into a long-form resume or exposing sensitive project details.
 
-🔗 GitHub: https://github.com/TPoe25
-```
+It focuses on four signals:
 
-## Purpose
-
-### I built this website to:
-- Create a single professional entry point for recruiters and collaborators
-- Present my projects in a clearer, more visual way than a resume alone
-- Reinforce a consistent personal brand across LinkedIn, GitHub, and my resume
-- Demonstrate practical frontend skills without overengineering
-- This site is designed to be easy to navigate, quick to load, and straightforward to maintain.
+- CTO leadership and technical strategy
+- Full-stack and systems architecture capability
+- Applied AI with clear guardrails and human decision points
+- Product/UI/UX judgment that makes complex systems easier to use
 
 ## What’s Included
-```
-About Me – concise professional summary aligned with my resume
-Portfolio – selected projects with descriptions and GitHub links
-Resume – downloadable PDF
-Contact – links to professional platforms
-```
+
+- Executive hero with current CTO role
+- Technical leadership summary
+- Capability matrix spanning engineering, AI, UI/UX, and architecture
+- Selected work presented at an intentionally abstract level
+- Interactive architecture lab built with lightweight JavaScript
+- Experience and education timeline
+- Professional links and downloadable resume
 
 ## Tech Stack
-```
-HTML5
-CSS3
-JavaScript
-Bootstrap (layout & responsiveness)
-GitHub Pages (hosting)
-No heavy frameworks are used. The focus is clarity, accessibility, and performance.
+
+- Semantic HTML5
+- Modern CSS with custom design tokens
+- Vanilla JavaScript
+- Responsive, accessible layout
+- GitHub Pages hosting
+
+No application framework is required. The site is intentionally lightweight and keeps runtime dependencies to a minimum.
+
+## Design Direction
+
+The visual system is a restrained technical/executive aesthetic rather than a traditional developer-template portfolio:
+
+- Deep navy surfaces with indigo/cyan accents
+- High-contrast editorial typography
+- Glass and grid effects used sparingly
+- Strong spacing and hierarchy for resume scanning
+- Interactive elements used as evidence of engineering judgment, not decoration
+- Responsive behavior across desktop, tablet, and mobile
+- `prefers-reduced-motion` support and visible focus states
+
+## Project Privacy
+
+Current venture work is intentionally described at the system-pattern level. The goal is to demonstrate architecture, engineering, product, and AI thinking without publishing sensitive implementation details.
+
+## Local Development
+
+Because the project is static, you can open `index.html` directly or serve the directory with any local static server.
+
+Example:
+
+```bash
+python3 -m http.server 8000
 ```
 
-## Design Approach
-- Mobile-first and responsive
-- Clean layout with readable typography
-- Minimal animations and styling distractions
-- Consistent branding with LinkedIn and GitHub
-- The design prioritizes content and usability over visual complexity.
+Then visit `http://localhost:8000`.
 
 ## Deployment
 
-**The site is hosted using GitHub Pages and deployed directly from the main branch.**
+GitHub Pages deploys from the `main` branch.
 
-###To deploy updates:
-```
+```bash
 git add .
-git commit -m "Update site content"
+git commit -m "Refresh CTO portfolio"
 git push origin main
 ```
 
-Changes are automatically reflected on the live site.
+## Repository Structure
 
-## Future Improvements
+```text
+.
+├── index.html
+├── styles.css
+├── resume.pdf
+├── readme.md
+└── images/
+    ├── profile.jpg
+    └── incisight-cover.png
+```
 
-- Add project write-ups and architecture diagrams
-- Improve accessibility and contrast checks
-- Add lightweight animations or transitions
-- Integrate blog or project updates if needed
+## Design Goal
 
-## Why This Project Matters
-- This website serves as my professional homepage. It ties together my projects, resume, and online presence in one place and reflects how I approach engineering: practical, intentional, and built to scale when needed.
+This site should feel like the homepage of a technical executive who can still build: clear enough for recruiters and partners to scan quickly, detailed enough for engineers to recognize depth, and polished enough to represent leadership-level work.
